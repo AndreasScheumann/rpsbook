@@ -1,0 +1,1215 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Part 1: &#8212; Rock, Paper, Scissors book</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Content with notebooks" href="notebooks.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Rock, Paper, Scissors book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="content.html">
+   Content in Jupyter Book
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="markdown.html">
+     Markdown Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notebooks.html">
+     Content with notebooks
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Part 1:
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/PART_1_model_creation.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://andreasscheumann.github.io/rpsbook/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://andreasscheumann.github.io/rpsbook//issues/new?title=Issue%20on%20page%20%2FPART_1_model_creation.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Part 1:
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creation-of-rock-paper-scissors-model-with-keras">
+   Creation of Rock, Paper, Scissors Model with Keras
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-creation">
+   Model Creation
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hyperparameter-tuning">
+     Hyperparameter Tuning
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-your-model">
+       Load your model
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#converting-the-format-of-the-model">
+     Converting the format of the model
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#explainable-ai-usage-of-shap">
+   Explainable AI - Usage of SHAP
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p>The goal of this project is it, to create a model which in the end can be used in a website predicting the images captured by the webcam of the user and label these to one of the three classes rock, paper or scissors.</p>
+<p>This project is split into two parts: First the creation of a Keras image classification model,  and the second part is the creation of a prototype website with usage of the created model.</p>
+<section id="part-1">
+<h1>Part 1:<a class="headerlink" href="#part-1" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="creation-of-rock-paper-scissors-model-with-keras">
+<h1>Creation of Rock, Paper, Scissors Model with Keras<a class="headerlink" href="#creation-of-rock-paper-scissors-model-with-keras" title="Permalink to this headline">¶</a></h1>
+<p>In this notebook we create an <strong>image classification model with Keras</strong>, predicting images of hands, if they show a rock, paper or scissors.
+For this, we use the labelled Rock Paper Scissors dataset from Laurence Moroney which contains with CGI created images of hands from different races, ages and genders posing either rock, paper or scissors. (Source: <a class="reference external" href="https://laurencemoroney.com/datasets.html">https://laurencemoroney.com/datasets.html</a>)</p>
+<p>There is a training and a test set.
+You will need to have a folder “<strong>data</strong>” next to this file where you put these both downloaded unzipped folders <em>rps</em> and <em>rps-test-set</em>.</p>
+<p>First, we want to take a look at the data.
+Therefore, the paths of the directories of the different classes are saved.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">rock_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data/rps/rock&#39;</span><span class="p">)</span>
+<span class="n">paper_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data/rps/paper&#39;</span><span class="p">)</span>
+<span class="n">scissors_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data/rps/scissors&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then, a list of every filename of each class is saved.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total training rock images:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">rock_dir</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total training paper images:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">paper_dir</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total training scissors images:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">scissors_dir</span><span class="p">)))</span>
+
+<span class="n">rock_files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">rock_dir</span><span class="p">)</span>
+<span class="n">paper_files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">paper_dir</span><span class="p">)</span>
+<span class="n">scissors_files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">scissors_dir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_103244</span><span class="o">/</span><span class="mf">2741649598.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total training rock images:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">rock_dir</span><span class="p">)))</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total training paper images:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">paper_dir</span><span class="p">)))</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total training scissors images:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">scissors_dir</span><span class="p">)))</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">rock_files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">rock_dir</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [WinError 3] Das System kann den angegebenen Pfad nicht finden: &#39;data/rps/rock&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>For showcase, two pictures of each class are shown below by using matplotlib.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.image</span> <span class="k">as</span> <span class="nn">mpimg</span>
+
+<span class="n">pic_index</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="n">next_rock</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">rock_dir</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span> 
+                <span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="n">rock_files</span><span class="p">[</span><span class="n">pic_index</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="n">pic_index</span><span class="p">]]</span>
+<span class="n">next_paper</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">paper_dir</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span> 
+                <span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="n">paper_files</span><span class="p">[</span><span class="n">pic_index</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="n">pic_index</span><span class="p">]]</span>
+<span class="n">next_scissors</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">scissors_dir</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span> 
+                <span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="n">scissors_files</span><span class="p">[</span><span class="n">pic_index</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="n">pic_index</span><span class="p">]]</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">img_path</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">next_rock</span><span class="o">+</span><span class="n">next_paper</span><span class="o">+</span><span class="n">next_scissors</span><span class="p">):</span>
+  <span class="c1">#print(img_path)</span>
+  <span class="n">img</span> <span class="o">=</span> <span class="n">mpimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;Off&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PART_1_model_creation_8_0.png" src="_images/PART_1_model_creation_8_0.png" />
+<img alt="_images/PART_1_model_creation_8_1.png" src="_images/PART_1_model_creation_8_1.png" />
+<img alt="_images/PART_1_model_creation_8_2.png" src="_images/PART_1_model_creation_8_2.png" />
+<img alt="_images/PART_1_model_creation_8_3.png" src="_images/PART_1_model_creation_8_3.png" />
+<img alt="_images/PART_1_model_creation_8_4.png" src="_images/PART_1_model_creation_8_4.png" />
+<img alt="_images/PART_1_model_creation_8_5.png" src="_images/PART_1_model_creation_8_5.png" />
+</div>
+</div>
+<p>Now we will use real-time data augmentation with the help of <code class="docutils literal notranslate"><span class="pre">ImageDataGenerator</span></code> and <code class="docutils literal notranslate"><span class="pre">flow_from_directory</span></code> to generate batches of tensor images for training data and validation data.</p>
+<p>In the ImageDataGenerator, many parameters can be set to manipulate the images. Images are rotated, horizontal flipped, rescaled and more.</p>
+<p>The finished generated sets of data are saved as variablea <em>train_generator</em> and <em>validation_generator</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="kn">import</span> <span class="nn">keras_preprocessing</span>
+<span class="kn">from</span> <span class="nn">keras_preprocessing</span> <span class="kn">import</span> <span class="n">image</span>
+<span class="kn">from</span> <span class="nn">keras_preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span>
+
+<span class="n">TRAINING_DIR</span> <span class="o">=</span> <span class="s2">&quot;data/rps/&quot;</span>
+<span class="n">training_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span>
+      <span class="n">rescale</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span>
+	    <span class="n">rotation_range</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+      <span class="n">width_shift_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+      <span class="n">height_shift_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+      <span class="n">shear_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+      <span class="n">zoom_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+      <span class="n">horizontal_flip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+      <span class="n">fill_mode</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+
+<span class="n">VALIDATION_DIR</span> <span class="o">=</span> <span class="s2">&quot;data/rps-test-set/&quot;</span>
+<span class="n">validation_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">)</span>
+
+<span class="n">train_generator</span> <span class="o">=</span> <span class="n">training_datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span>
+	<span class="n">TRAINING_DIR</span><span class="p">,</span>
+	<span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span><span class="mi">150</span><span class="p">),</span>
+	<span class="n">class_mode</span><span class="o">=</span><span class="s1">&#39;categorical&#39;</span><span class="p">,</span>
+  <span class="n">batch_size</span><span class="o">=</span><span class="mi">126</span>
+<span class="p">)</span>
+
+<span class="n">validation_generator</span> <span class="o">=</span> <span class="n">validation_datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span>
+	<span class="n">VALIDATION_DIR</span><span class="p">,</span>
+	<span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span><span class="mi">150</span><span class="p">),</span>
+	<span class="n">class_mode</span><span class="o">=</span><span class="s1">&#39;categorical&#39;</span><span class="p">,</span>
+  <span class="n">batch_size</span><span class="o">=</span><span class="mi">126</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found 2520 images belonging to 3 classes.
+Found 372 images belonging to 3 classes.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="model-creation">
+<h1>Model Creation<a class="headerlink" href="#model-creation" title="Permalink to this headline">¶</a></h1>
+<p>In the following, we are creating our sequental classification keras model.</p>
+<p>We are using several <strong>convolutional layers</strong> with MaxPooling layers, so it generates filters (first parameter) on its own and chooses the best ones each epoch.
+The <strong>MaxPooling</strong> layers <em>compress</em> the image and <em>enhance</em> the features. (Takes 2x2 pixels and only take the highest value)
+We <strong>stack</strong> these convolutional layers each with a MaxPooling layer to break down the image and get abstract features.</p>
+<p>After this we flatten the inputs with the Flatten layer (converts matrix to single array) and the Dropout layer which drops input units with the rate 0.5 to prevent overfitting,
+both with the goal to feed the results in our neural network, namely to the first Dense layer and then to the final Dense layer which is our output.</p>
+<p>Parameter details:</p>
+<ul class="simple">
+<li><p>Conv2D:   filters:        64 or 128: number of filters to be generated and multiply each of them across the image, each epoch it chooses the best fitting filter
+kernel_size:    (3,3): specifiying the width and height of the 2D convolution window
+activation:     relu: (rectified linear unit activation function) –&gt; returns output for positive values, negatives are filtered out
+input_shape:    shape of the input –&gt; only for first layer taking the input</p></li>
+<li><p>MaxPooling2D: pool_size:  2,2 setting input window</p></li>
+<li><p>Dense:    units:      number of neurons –&gt; for the final layer, it is the count of the classes to predict
+activation: relu (same as above),
+softmax:    for final layer –&gt; sets largest of three numbers to 1 and all others to 0 for simplification</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+    <span class="c1"># Note the input shape is the desired size of the image 150x150 with 3 bytes color</span>
+    <span class="c1"># First convolution</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> 
+        <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">3</span><span class="p">)),</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+    <span class="c1"># The second convolution</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+    <span class="c1"># The third convolution</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+    <span class="c1"># The fourth convolution</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+    <span class="c1"># Flatten the results to feed into a DNN</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Flatten</span><span class="p">(),</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span>
+    <span class="c1"># 512 neuron hidden layer</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">)</span>
+<span class="p">])</span>
+
+
+<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model: &quot;sequential&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 148, 148, 64)      1792      
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 74, 74, 64)       0         
+ )                                                               
+                                                                 
+ conv2d_1 (Conv2D)           (None, 72, 72, 64)        36928     
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 36, 36, 64)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_2 (Conv2D)           (None, 34, 34, 128)       73856     
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 17, 17, 128)      0         
+ 2D)                                                             
+                                                                 
+ conv2d_3 (Conv2D)           (None, 15, 15, 128)       147584    
+                                                                 
+ max_pooling2d_3 (MaxPooling  (None, 7, 7, 128)        0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 6272)              0         
+                                                                 
+ dropout (Dropout)           (None, 6272)              0         
+                                                                 
+ dense (Dense)               (None, 512)               3211776   
+                                                                 
+ dense_1 (Dense)             (None, 3)                 1539      
+                                                                 
+=================================================================
+Total params: 3,473,475
+Trainable params: 3,473,475
+Non-trainable params: 0
+_________________________________________________________________
+</pre></div>
+</div>
+</div>
+</div>
+<p>Before we fit the model, we set up our <em><strong>TensorBoard</strong></em> callback to visualize the fitting over the epochs in the TensorBoard.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Additionally use Tensorboard for visualization</span>
+
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">tensorflow.python.keras.callbacks</span> <span class="kn">import</span> <span class="n">TensorBoard</span>
+
+<span class="n">tensorboard</span> <span class="o">=</span> <span class="n">TensorBoard</span><span class="p">(</span><span class="n">log_dir</span><span class="o">=</span><span class="s2">&quot;logs_final/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the next step, we compile our model with <code class="docutils literal notranslate"><span class="pre">categorical_crossentropy</span></code> as the loss parameter. We use this one, because we have three label classes and expect the labels to be provided in a one_hot represantation, not as integers.
+As the optimizer we use the gradient-based optimization technique <code class="docutils literal notranslate"><span class="pre">rmsprop</span></code> (Root Mean Squared Propagation) and for metrics we use <code class="docutils literal notranslate"><span class="pre">accuracy</span></code> which calculates how often predictions equal labels.</p>
+<p>For the fitting of our model, we use our earlier with data augmentation generated images <code class="docutils literal notranslate"><span class="pre">train_generator</span></code> as the input, with 25 epochs with each 20 steps.
+The generated validation data saved as <code class="docutils literal notranslate"><span class="pre">validation_generator</span></code> is used as validation data, verbose set to 1 for visualization of the progress in an animated bar and validation_steps is set to 3. Also we use our variable tensorboard we initalized before in the callbacks paramater, which will generate TensorBoard log files parallel to the fitting which can be then visualized in the Tensorboard.</p>
+<p>After running the fit, the created model is saved as an h5-file for later use.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span> <span class="o">=</span> <span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;rmsprop&#39;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
+
+<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_generator</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">steps_per_epoch</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">validation_data</span> <span class="o">=</span> <span class="n">validation_generator</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">validation_steps</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">tensorboard</span><span class="p">])</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;rps.h5&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch 1/25
+20/20 [==============================] - 31s 1s/step - loss: 1.8442 - accuracy: 0.3448 - val_loss: 1.1612 - val_accuracy: 0.3333
+Epoch 2/25
+20/20 [==============================] - 28s 1s/step - loss: 1.1690 - accuracy: 0.4183 - val_loss: 1.0423 - val_accuracy: 0.3602
+Epoch 3/25
+20/20 [==============================] - 28s 1s/step - loss: 1.0159 - accuracy: 0.4972 - val_loss: 0.7337 - val_accuracy: 0.7688
+Epoch 4/25
+20/20 [==============================] - 28s 1s/step - loss: 1.0890 - accuracy: 0.5667 - val_loss: 1.0160 - val_accuracy: 0.4489
+Epoch 5/25
+20/20 [==============================] - 29s 1s/step - loss: 0.8462 - accuracy: 0.6198 - val_loss: 0.3147 - val_accuracy: 1.0000
+Epoch 6/25
+20/20 [==============================] - 28s 1s/step - loss: 0.7040 - accuracy: 0.6837 - val_loss: 0.4642 - val_accuracy: 0.6694
+Epoch 7/25
+20/20 [==============================] - 29s 1s/step - loss: 0.6128 - accuracy: 0.7290 - val_loss: 0.2235 - val_accuracy: 0.9785
+Epoch 8/25
+20/20 [==============================] - 28s 1s/step - loss: 0.5214 - accuracy: 0.7817 - val_loss: 0.2871 - val_accuracy: 0.8414
+Epoch 9/25
+20/20 [==============================] - 28s 1s/step - loss: 0.5395 - accuracy: 0.7726 - val_loss: 0.2733 - val_accuracy: 0.9140
+Epoch 10/25
+20/20 [==============================] - 28s 1s/step - loss: 0.3741 - accuracy: 0.8726 - val_loss: 0.1202 - val_accuracy: 0.9731
+Epoch 11/25
+20/20 [==============================] - 28s 1s/step - loss: 0.3398 - accuracy: 0.8671 - val_loss: 0.0370 - val_accuracy: 1.0000
+Epoch 12/25
+20/20 [==============================] - 28s 1s/step - loss: 0.2701 - accuracy: 0.8925 - val_loss: 0.2223 - val_accuracy: 0.9113
+Epoch 13/25
+20/20 [==============================] - 29s 1s/step - loss: 0.2397 - accuracy: 0.9175 - val_loss: 0.0311 - val_accuracy: 1.0000
+Epoch 14/25
+20/20 [==============================] - 28s 1s/step - loss: 0.2555 - accuracy: 0.9151 - val_loss: 0.0458 - val_accuracy: 1.0000
+Epoch 15/25
+20/20 [==============================] - 29s 1s/step - loss: 0.1775 - accuracy: 0.9321 - val_loss: 0.1416 - val_accuracy: 0.9328
+Epoch 16/25
+20/20 [==============================] - 29s 1s/step - loss: 0.1460 - accuracy: 0.9460 - val_loss: 0.0218 - val_accuracy: 1.0000
+Epoch 17/25
+20/20 [==============================] - 28s 1s/step - loss: 0.1353 - accuracy: 0.9516 - val_loss: 0.0058 - val_accuracy: 1.0000
+Epoch 18/25
+20/20 [==============================] - 29s 1s/step - loss: 0.1426 - accuracy: 0.9460 - val_loss: 0.0437 - val_accuracy: 0.9839
+Epoch 19/25
+20/20 [==============================] - 29s 1s/step - loss: 0.1992 - accuracy: 0.9337 - val_loss: 0.1036 - val_accuracy: 0.9274
+Epoch 20/25
+20/20 [==============================] - 29s 1s/step - loss: 0.1557 - accuracy: 0.9397 - val_loss: 0.5596 - val_accuracy: 0.6586
+Epoch 21/25
+20/20 [==============================] - 30s 1s/step - loss: 0.0830 - accuracy: 0.9734 - val_loss: 0.0170 - val_accuracy: 1.0000
+Epoch 22/25
+20/20 [==============================] - 29s 1s/step - loss: 0.1462 - accuracy: 0.9484 - val_loss: 0.0169 - val_accuracy: 1.0000
+Epoch 23/25
+20/20 [==============================] - 29s 1s/step - loss: 0.0655 - accuracy: 0.9774 - val_loss: 0.0418 - val_accuracy: 1.0000
+Epoch 24/25
+20/20 [==============================] - 30s 1s/step - loss: 0.0897 - accuracy: 0.9679 - val_loss: 0.0399 - val_accuracy: 1.0000
+Epoch 25/25
+20/20 [==============================] - 29s 1s/step - loss: 0.0825 - accuracy: 0.9742 - val_loss: 0.0099 - val_accuracy: 1.0000
+</pre></div>
+</div>
+</div>
+</div>
+<p>For visualization, the progress of the accuracies over the epochs is made visible in a plot with pyplot from matplotlib.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">acc</span> <span class="o">=</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">]</span>
+<span class="n">val_acc</span> <span class="o">=</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;val_accuracy&#39;</span><span class="p">]</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;loss&#39;</span><span class="p">]</span>
+<span class="n">val_loss</span> <span class="o">=</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;val_loss&#39;</span><span class="p">]</span>
+
+<span class="n">epochs</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">acc</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <span class="n">acc</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Training accuracy&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <span class="n">val_acc</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Validation accuracy&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Training and validation accuracy&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PART_1_model_creation_18_0.png" src="_images/PART_1_model_creation_18_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Also we can have a look at the TensorBoard containing more interactive graphs of the data with loading its extension, choosing “Use current working directory” and then selecting the right files in the search bar:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> tensorboard
+</pre></div>
+</div>
+</div>
+</div>
+<section id="hyperparameter-tuning">
+<h2>Hyperparameter Tuning<a class="headerlink" href="#hyperparameter-tuning" title="Permalink to this headline">¶</a></h2>
+<p>In the next steps, we will have a look on using hyperparameter tuning in this case.</p>
+<p>First we import everything needed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">keras_tuner</span> <span class="k">as</span> <span class="nn">kt</span>
+
+<span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras</span> <span class="kn">import</span> <span class="n">layers</span>
+
+<span class="kn">from</span> <span class="nn">tensorboard</span> <span class="kn">import</span> <span class="n">notebook</span>
+<span class="kn">from</span> <span class="nn">tensorboard.plugins.hparams</span> <span class="kn">import</span> <span class="n">api</span> <span class="k">as</span> <span class="n">hp</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we define the function, which creates a model with given hyperparamters. Here we set, in which cases we want to test different parameter.</p>
+<p>In our case, we want to test if having a dropout layer is important, how many units in the first Dense layer are better and with which activation choice, and also in compiling the model we will have a look on the impact of changing the RMSprop learning rate as the optimizer parameter.</p>
+<p>The rest is like the model we created before, only that it is made in a different way.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">build_model</span><span class="p">(</span><span class="n">hp</span><span class="p">):</span>
+    <span class="n">hp_model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">()</span>
+
+    <span class="n">hp_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span>
+    <span class="n">hp_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+    <span class="n">hp_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
+    <span class="n">hp_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+    <span class="n">hp_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
+    <span class="n">hp_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+    <span class="n">hp_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
+    <span class="n">hp_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+    <span class="n">hp_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">Flatten</span><span class="p">())</span>
+    <span class="k">if</span> <span class="n">hp</span><span class="o">.</span><span class="n">Boolean</span><span class="p">(</span><span class="s2">&quot;dropout&quot;</span><span class="p">):</span>
+        <span class="n">hp_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">rate</span><span class="o">=</span><span class="mf">0.5</span><span class="p">))</span>
+    <span class="n">hp_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span>
+            <span class="n">units</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">Int</span><span class="p">(</span><span class="s2">&quot;units&quot;</span><span class="p">,</span> <span class="n">min_value</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">32</span><span class="p">),</span>
+            <span class="n">activation</span><span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">Choice</span><span class="p">(</span><span class="s2">&quot;activation&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;relu&quot;</span><span class="p">,</span> <span class="s2">&quot;tanh&quot;</span><span class="p">]),</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">hp_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">))</span>
+
+    <span class="n">learning_rate</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">Float</span><span class="p">(</span><span class="s2">&quot;lr&quot;</span><span class="p">,</span> <span class="n">min_value</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">,</span> <span class="n">sampling</span><span class="o">=</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+
+    <span class="n">hp_model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span> 
+        <span class="n">optimizer</span><span class="o">=</span><span class="n">keras</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">RMSprop</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">),</span> 
+        <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">hp_model</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To test if our function returns a valid model:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">build_model</span><span class="p">(</span><span class="n">kt</span><span class="o">.</span><span class="n">HyperParameters</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;keras.engine.sequential.Sequential at 0x2190841ef70&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we set up our Keras BayesionOptimization Tuner, which we give our build_model function (having hyperparameters as input), we define that we want to have the highest validation accuracy and we set the number of trials and execution per trial.</p>
+<p>In each trial, the machine choses a set of hyperparameter and fits the model over all given epochs.</p>
+<p>Also we set here the directory and the project_name for saving all data from each trial which contains all the chosen hyperparameter.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tuner</span> <span class="o">=</span> <span class="n">kt</span><span class="o">.</span><span class="n">BayesianOptimization</span><span class="p">(</span>
+    <span class="n">hypermodel</span><span class="o">=</span><span class="n">build_model</span><span class="p">,</span>
+    <span class="n">objective</span><span class="o">=</span><span class="s2">&quot;val_accuracy&quot;</span><span class="p">,</span>
+    <span class="n">max_trials</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">executions_per_trial</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">directory</span><span class="o">=</span><span class="s2">&quot;hp_tmp&quot;</span><span class="p">,</span>
+    <span class="n">project_name</span><span class="o">=</span><span class="s2">&quot;04_rps_tuning&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>With <code class="docutils literal notranslate"><span class="pre">search_space_summary()</span></code> we can have a look at the tuner and all the hyperparameter it will chooses from. In this case, we have 4 different places where different paramters are tested:</p>
+<ul class="simple">
+<li><p>A dropout layer or no dropout layer</p></li>
+<li><p>Number of units ranging from 32 to 512</p></li>
+<li><p>Choice of two different activations</p></li>
+<li><p>Value for learning rate in the range from 0.0001 to 0.01</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tuner</span><span class="o">.</span><span class="n">search_space_summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Search space summary
+Default search space size: 4
+dropout (Boolean)
+{&#39;default&#39;: False, &#39;conditions&#39;: []}
+units (Int)
+{&#39;default&#39;: None, &#39;conditions&#39;: [], &#39;min_value&#39;: 32, &#39;max_value&#39;: 512, &#39;step&#39;: 32, &#39;sampling&#39;: None}
+activation (Choice)
+{&#39;default&#39;: &#39;relu&#39;, &#39;conditions&#39;: [], &#39;values&#39;: [&#39;relu&#39;, &#39;tanh&#39;], &#39;ordered&#39;: False}
+lr (Float)
+{&#39;default&#39;: 0.0001, &#39;conditions&#39;: [], &#39;min_value&#39;: 0.0001, &#39;max_value&#39;: 0.01, &#39;step&#39;: None, &#39;sampling&#39;: &#39;log&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>With the <code class="docutils literal notranslate"><span class="pre">search</span></code> function the tuner will execute all the trials and outputs each trials set of hyperparameters, the current best set of them and also the normal output like when you fit a model normally.</p>
+<p>We will give the function just like a normal model.fit() our training and validation data, set the number of epochs of each trial execution and we also set a TensorBoard instance with a specified logging directory as a callback to visualize each trial, as before.</p>
+<p>Now, each trial the with chosen set of hyperparamters it runs a model fit and works with the results with the aim to optimize the choice of the parameters.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">log_dir</span> <span class="o">=</span> <span class="s2">&quot;hp_tmp/04_tb_logs/&quot;</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">-%H%M%S&quot;</span><span class="p">)</span>
+
+<span class="n">tuner</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+    <span class="n">train_generator</span><span class="p">,</span>
+    <span class="n">epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">validation_data</span><span class="o">=</span><span class="n">validation_generator</span><span class="p">,</span>
+    <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">TensorBoard</span><span class="p">(</span><span class="n">log_dir</span><span class="o">=</span><span class="n">log_dir</span><span class="p">)],</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Trial 30 Complete [00h 02m 18s]
+val_accuracy: 0.8709677457809448
+
+Best val_accuracy So Far: 1.0
+Total elapsed time: 01h 48m 41s
+INFO:tensorflow:Oracle triggered exit
+</pre></div>
+</div>
+</div>
+</div>
+<p>With <code class="docutils literal notranslate"><span class="pre">get_best_models</span></code> the tuner will return a list of the models with the best val_accuracy, as many as we defined.</p>
+<p>We choose the best one and save it as best_model.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hp_models</span> <span class="o">=</span> <span class="n">tuner</span><span class="o">.</span><span class="n">get_best_models</span><span class="p">(</span><span class="n">num_models</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">best_model</span> <span class="o">=</span> <span class="n">hp_models</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here, we will have a look at our best model:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">best_model</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+<span class="n">best_model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model: &quot;sequential&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 148, 148, 64)      1792      
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 74, 74, 64)       0         
+ )                                                               
+                                                                 
+ conv2d_1 (Conv2D)           (None, 72, 72, 64)        36928     
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 36, 36, 64)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_2 (Conv2D)           (None, 34, 34, 128)       73856     
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 17, 17, 128)      0         
+ 2D)                                                             
+                                                                 
+ conv2d_3 (Conv2D)           (None, 15, 15, 128)       147584    
+                                                                 
+ max_pooling2d_3 (MaxPooling  (None, 7, 7, 128)        0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 6272)              0         
+                                                                 
+ dropout (Dropout)           (None, 6272)              0         
+                                                                 
+ dense (Dense)               (None, 512)               3211776   
+                                                                 
+ dense_1 (Dense)             (None, 3)                 1539      
+                                                                 
+=================================================================
+Total params: 3,473,475
+Trainable params: 3,473,475
+Non-trainable params: 0
+_________________________________________________________________
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">results_summary</span></code> outputs a summary of the whole search, showing the details of the ten best trials and their sets of parameters.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tuner</span><span class="o">.</span><span class="n">results_summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Results summary
+Results in hp_tmp\04_rps_tuning
+Showing 10 best trials
+&lt;keras_tuner.engine.objective.Objective object at 0x000002190841ED90&gt;
+Trial summary
+Hyperparameters:
+dropout: True
+units: 512
+activation: relu
+lr: 0.00022707875054163085
+Score: 1.0
+Trial summary
+Hyperparameters:
+dropout: False
+units: 512
+activation: tanh
+lr: 0.0003557267033472106
+Score: 1.0
+Trial summary
+Hyperparameters:
+dropout: False
+units: 512
+activation: tanh
+lr: 0.000364277539789592
+Score: 1.0
+Trial summary
+Hyperparameters:
+dropout: False
+units: 192
+activation: tanh
+lr: 0.0004081941231802615
+Score: 0.9919354915618896
+Trial summary
+Hyperparameters:
+dropout: False
+units: 480
+activation: tanh
+lr: 0.0005040515782337704
+Score: 0.975806474685669
+Trial summary
+Hyperparameters:
+dropout: False
+units: 512
+activation: tanh
+lr: 0.000410636499791608
+Score: 0.9731183052062988
+Trial summary
+Hyperparameters:
+dropout: False
+units: 512
+activation: tanh
+lr: 0.00036370497099311866
+Score: 0.9704301357269287
+Trial summary
+Hyperparameters:
+dropout: False
+units: 288
+activation: tanh
+lr: 0.0003335609196797609
+Score: 0.9650537371635437
+Trial summary
+Hyperparameters:
+dropout: False
+units: 192
+activation: tanh
+lr: 0.00038424676834388757
+Score: 0.9650537371635437
+Trial summary
+Hyperparameters:
+dropout: True
+units: 512
+activation: tanh
+lr: 0.00020398913861424713
+Score: 0.9623655676841736
+</pre></div>
+</div>
+</div>
+</div>
+<p>With the best hyperparameters which we can derive from the tuner with the method <code class="docutils literal notranslate"><span class="pre">get_best_hyperparamaters</span></code>, we could build a new model with our defined function and show the details of it.</p>
+<p>Also we set up the Tensorboard to use in the fit.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">tensorflow.python.keras.callbacks</span> <span class="kn">import</span> <span class="n">TensorBoard</span>
+
+<span class="n">hp_tensorboard</span> <span class="o">=</span> <span class="n">TensorBoard</span><span class="p">(</span><span class="n">log_dir</span><span class="o">=</span><span class="s2">&quot;hp_tmp/logs/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="p">()))</span>
+
+<span class="n">best_hps</span> <span class="o">=</span> <span class="n">tuner</span><span class="o">.</span><span class="n">get_best_hyperparameters</span><span class="p">()</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">build_model</span><span class="p">(</span><span class="n">best_hps</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model: &quot;sequential_1&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_4 (Conv2D)           (None, 148, 148, 64)      1792      
+                                                                 
+ max_pooling2d_4 (MaxPooling  (None, 74, 74, 64)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_5 (Conv2D)           (None, 72, 72, 64)        36928     
+                                                                 
+ max_pooling2d_5 (MaxPooling  (None, 36, 36, 64)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_6 (Conv2D)           (None, 34, 34, 128)       73856     
+                                                                 
+ max_pooling2d_6 (MaxPooling  (None, 17, 17, 128)      0         
+ 2D)                                                             
+                                                                 
+ conv2d_7 (Conv2D)           (None, 15, 15, 128)       147584    
+                                                                 
+ max_pooling2d_7 (MaxPooling  (None, 7, 7, 128)        0         
+ 2D)                                                             
+                                                                 
+ flatten_1 (Flatten)         (None, 6272)              0         
+                                                                 
+ dropout (Dropout)           (None, 6272)              0         
+                                                                 
+ dense_2 (Dense)             (None, 512)               3211776   
+                                                                 
+ dense_3 (Dense)             (None, 3)                 1539      
+                                                                 
+=================================================================
+Total params: 3,473,475
+Trainable params: 3,473,475
+Non-trainable params: 0
+_________________________________________________________________
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then we could fit the model like normally with using the above defined Tensorboard as a callback.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_generator</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">steps_per_epoch</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">validation_data</span> <span class="o">=</span> <span class="n">validation_generator</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">validation_steps</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">hp_tensorboard</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch 1/13
+20/20 [==============================] - 29s 1s/step - loss: 0.0669 - accuracy: 0.9766 - val_loss: 0.1417 - val_accuracy: 0.9489
+Epoch 2/13
+20/20 [==============================] - 29s 1s/step - loss: 0.0588 - accuracy: 0.9798 - val_loss: 0.0823 - val_accuracy: 0.9624
+Epoch 3/13
+20/20 [==============================] - 28s 1s/step - loss: 0.0602 - accuracy: 0.9798 - val_loss: 0.0501 - val_accuracy: 0.9785
+Epoch 4/13
+20/20 [==============================] - 28s 1s/step - loss: 0.0512 - accuracy: 0.9806 - val_loss: 0.0614 - val_accuracy: 0.9731
+Epoch 5/13
+20/20 [==============================] - 28s 1s/step - loss: 0.0508 - accuracy: 0.9845 - val_loss: 0.2415 - val_accuracy: 0.9220
+Epoch 6/13
+20/20 [==============================] - 28s 1s/step - loss: 0.0565 - accuracy: 0.9794 - val_loss: 0.1405 - val_accuracy: 0.9489
+Epoch 7/13
+20/20 [==============================] - 28s 1s/step - loss: 0.0500 - accuracy: 0.9837 - val_loss: 0.1649 - val_accuracy: 0.9462
+Epoch 8/13
+20/20 [==============================] - 28s 1s/step - loss: 0.0550 - accuracy: 0.9813 - val_loss: 0.0970 - val_accuracy: 0.9624
+Epoch 9/13
+20/20 [==============================] - 28s 1s/step - loss: 0.0452 - accuracy: 0.9837 - val_loss: 0.1616 - val_accuracy: 0.9543
+Epoch 10/13
+20/20 [==============================] - 28s 1s/step - loss: 0.0529 - accuracy: 0.9861 - val_loss: 0.1665 - val_accuracy: 0.9382
+Epoch 11/13
+20/20 [==============================] - 28s 1s/step - loss: 0.0615 - accuracy: 0.9770 - val_loss: 0.1035 - val_accuracy: 0.9543
+Epoch 12/13
+20/20 [==============================] - 28s 1s/step - loss: 0.0375 - accuracy: 0.9881 - val_loss: 0.0657 - val_accuracy: 0.9785
+Epoch 13/13
+20/20 [==============================] - 28s 1s/step - loss: 0.0452 - accuracy: 0.9849 - val_loss: 0.4386 - val_accuracy: 0.8629
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;keras.callbacks.History at 0x219119107c0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Also we can save it again as Keras h5 format.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;hp_rps_01.h5&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the TensorBoard we can have a look at each execution and can explore the impact of the different parameters in the new HPParams tab.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> tensorboard
+</pre></div>
+</div>
+</div>
+</div>
+<section id="load-your-model">
+<h3>Load your model<a class="headerlink" href="#load-your-model" title="Permalink to this headline">¶</a></h3>
+<p>If you want to use a saved model and don’t have to run its fit again, insert here the name of the h5-file laying next to this file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s2">&quot;rps.h5&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>For test purposes, you can save png-files to test your model with, in the /images directory, and all images are predicted with the following code.</p>
+<p>Here you can also see how a png-file has to be prepared so it fits the input requirements of the model.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">keras.preprocessing</span> <span class="kn">import</span> <span class="n">image</span>
+
+<span class="n">imagename_list</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;images&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">imagename</span> <span class="ow">in</span> <span class="n">imagename_list</span><span class="p">:</span>
+
+    <span class="c1"># predicting images</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;images/&quot;</span> <span class="o">+</span> <span class="n">imagename</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">load_img</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">150</span><span class="p">))</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">img_to_array</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">images</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">x</span><span class="p">])</span>
+    <span class="n">classes</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">prediction</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">classes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mf">1.0</span><span class="p">:</span>
+        <span class="n">prediction</span> <span class="o">=</span> <span class="s2">&quot;Paper&quot;</span>
+    <span class="k">elif</span> <span class="n">classes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mf">1.0</span><span class="p">:</span>
+        <span class="n">prediction</span> <span class="o">=</span> <span class="s2">&quot;Rock&quot;</span>
+    <span class="k">elif</span> <span class="n">classes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mf">1.0</span><span class="p">:</span>
+        <span class="n">prediction</span> <span class="o">=</span> <span class="s2">&quot;Scissors&quot;</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">imagename</span> <span class="o">+</span> <span class="s2">&quot; --&gt; &quot;</span> <span class="o">+</span> <span class="n">prediction</span> <span class="o">+</span> <span class="s2">&quot; sein&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>scissors01-013.png      müsste  Scissors  sein
+test_paper_1.png      müsste  Paper  sein
+test_paper_2.PNG      müsste  Paper  sein
+test_paper_3.PNG      müsste  Paper  sein
+test_paper_4.PNG      müsste  Rock  sein
+test_paper_5.PNG      müsste  Scissors  sein
+test_rock_1.png      müsste  Rock  sein
+test_rock_2.PNG      müsste  Paper  sein
+test_rock_3.PNG      müsste  Rock  sein
+test_rock_4.PNG      müsste  Scissors  sein
+test_scissors_3.PNG      müsste  Scissors  sein
+test_sc_1.png      müsste  Scissors  sein
+test_sc_2.PNG      müsste  Rock  sein
+test_sc_3.PNG      müsste  Scissors  sein
+test_sc_4.PNG      müsste  Rock  sein
+test_sc_5.PNG      müsste  Rock  sein
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="converting-the-format-of-the-model">
+<h2>Converting the format of the model<a class="headerlink" href="#converting-the-format-of-the-model" title="Permalink to this headline">¶</a></h2>
+<p>Because our goal is it to make a website and use our model directly in its JavaScript files, we convert our Keras model in a format that <em><strong>TensorflowJS</strong></em> can use, which is a json-file with shard-files, called the layer format.</p>
+<p>Those generated files are used in the next part, the deployment, to let our model work on a website.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflowjs</span> <span class="k">as</span> <span class="nn">tfjs</span>
+
+<span class="n">tfjs</span><span class="o">.</span><span class="n">converters</span><span class="o">.</span><span class="n">save_keras_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="s2">&quot;models&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="explainable-ai-usage-of-shap">
+<h1>Explainable AI - Usage of SHAP<a class="headerlink" href="#explainable-ai-usage-of-shap" title="Permalink to this headline">¶</a></h1>
+<p>With Shap (SHapely Additive exPlanations) we can explain the output of our machine learning model.</p>
+<p>First, we have to convert our data to a datatype SHAP can use (numpy.ndarray) and split each the train and validation data into X and y for further steps.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">train_generator</span><span class="p">))</span>
+<span class="n">train_x</span><span class="p">,</span> <span class="n">train_y</span> <span class="o">=</span> <span class="n">train_generator</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+<span class="n">val_x</span><span class="p">,</span> <span class="n">val_y</span> <span class="o">=</span> <span class="n">validation_generator</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">train_x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;keras_preprocessing.image.directory_iterator.DirectoryIterator&#39;&gt;
+&lt;class &#39;numpy.ndarray&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>For the following we are going to need shap and numpy.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">shap</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We are using the <code class="docutils literal notranslate"><span class="pre">DeepExplainer</span></code> which needs the model and a background which we create beforehand.</p>
+<p>We use this Explainer to generate the SHAP values and plot these below.
+The blue areas show negative SHAP values whereas the red ones show positive SHAP values.</p>
+<p>Each column stands for one class (Paper, Rock, Scissors) and explains how the model decides which class an image is predicted to be.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">background</span> <span class="o">=</span> <span class="n">train_x</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">train_x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">100</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
+
+<span class="n">explainer</span> <span class="o">=</span> <span class="n">shap</span><span class="o">.</span><span class="n">DeepExplainer</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">background</span><span class="p">)</span>
+
+<span class="n">shap_values</span> <span class="o">=</span> <span class="n">explainer</span><span class="o">.</span><span class="n">shap_values</span><span class="p">(</span><span class="n">val_x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+
+<span class="n">shap</span><span class="o">.</span><span class="n">image_plot</span><span class="p">(</span><span class="n">shap_values</span><span class="p">,</span> <span class="o">-</span><span class="n">val_x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Your TensorFlow version is newer than 2.4.0 and so graph support has been removed in eager mode and some static graphs may not be supported. See PR #1483 for discussion.
+`tf.keras.backend.set_learning_phase` is deprecated and will be removed after 2020-10-11. To update it, simply pass a True/False value to the `training` argument of the `__call__` method of your layer or model.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:tensorflow:5 out of the last 16 calls to &lt;function TFDeep.phi_symbolic.&lt;locals&gt;.grad_graph at 0x0000019C8CAAB3A0&gt; triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+</pre></div>
+</div>
+<img alt="_images/PART_1_model_creation_59_3.png" src="_images/PART_1_model_creation_59_3.png" />
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="notebooks.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Content with notebooks</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Andreas Scheumann<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+    
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+
+    
+  </body>
+</html>
